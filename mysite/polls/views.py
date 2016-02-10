@@ -1,9 +1,7 @@
 from django.shortcuts import render
-
-# Create your views here.
 from .models import Question
 from django.http import HttpResponse
-
+# Create your views here.
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
